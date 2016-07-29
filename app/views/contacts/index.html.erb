@@ -2,6 +2,22 @@
   <h1 class="center grey-text text-darken-3"> Welcome to The Phone Book</h1>
   <hr />
   <center><p class='btn green lighten-2'><%= link_to 'New Contact', new_contact_path, class: 'white-text' %></p></center>
+  <br>
+  <br>
+  <br>
+  <div class='row'>
+    <div class='col s4 offset-s4'>
+      <% if @contacts.present? %>
+        <%= render @contacts %>
+      <% else %>
+        <p>There are no contacts containing the term(s) <%= params[:search] %>.</p>
+      <% end %>
+      <%= form_tag(contacts_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Contacts" %>
+      <%= submit_tag "Search", class: 'btn grey darken-2' %>   <%= link_to 'Show All', root_path, class: 'btn brown lighten-2'%>
+      <% end %>
+    </div>
+  </div>
 
 
 
