@@ -34,6 +34,7 @@ gem 'materialize-sass'
 gem 'better_errors'
 gem 'puma'
 gem 'devise'
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
