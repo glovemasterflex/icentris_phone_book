@@ -1,3 +1,5 @@
+<br>
+<%= link_to 'Back to Contact List', root_path, class: 'btn red lighten-2' %>
 <h1 class='center'>New Contact</h1>
 <%= form_for @contact do |c| %>
   <%= c.label :name %>
@@ -12,5 +14,6 @@
   <%= c.label :address %>
   <%= c.text_field :address %>
 
-  <%= c.submit %>
+  <%= c.submit class: "btn green lighten-2" %>
+
 <% end %>
