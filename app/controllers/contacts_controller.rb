@@ -29,7 +29,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
 
     if @contact.update(contact_params)
-      direct_to root_path
+      redirect_to root_path
     else
       render :edit
     end

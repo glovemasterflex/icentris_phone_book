@@ -1,7 +1,7 @@
 
   <h1 class="center"> Welcome to Your Phone Book</h1>
   <hr />
-  <p class='btn green lighten-2'><%= link_to 'New Contact', new_contact_path, class: 'white-text' %></p>
+  <center><p class='btn green lighten-2'><%= link_to 'New Contact', new_contact_path, class: 'white-text' %></p></center>
 
 
 
@@ -9,8 +9,8 @@
       <% @contacts.each do |cont| %>
       <div class='col s4'>
         <div class='card panel'>
-          <div class="card red lighten-2">
-            <div class="card-content white-text">
+          <div class="card light-blue lighten-2">
+            <div class="card-content black-text">
               <span class="card-title"><%= cont.name %></span>
                 <p>
                   <%= cont.phone_number %><br>
@@ -19,8 +19,8 @@
                 </p> 
             </div>
             <div class="card-action">
-              <%= link_to 'Edit', edit_contact_path(cont), class: 'black-text' %>
-              <%= link_to 'Delete', contact_path(cont), method: :delete, class: 'black-text' %>
+              <%= link_to 'Edit', edit_contact_path(cont), class: 'white-text' %>
+              <%= link_to 'Delete', contact_path(cont), method: :delete, class: 'white-text' %>
             </div>
           </div>
         </div>
